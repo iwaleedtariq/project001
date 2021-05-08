@@ -29,9 +29,12 @@ jobs:
           node-version: 12
         
         #Install Yar
+      - name: Install Yarn
       - uses: borales/actions-yarn@v2.0.0
         with:
           cmd: install # will run `yarn install` command
+          
+      - name: Build React App
       - uses: borales/actions-yarn@v2.0.0
         with:
           cmd: build # will run `yarn build` command
